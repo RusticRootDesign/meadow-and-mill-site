@@ -669,7 +669,7 @@ a {
 }
 
 .work-background-wrapper {
-	background-image: url("../images/work-space.png");
+	background-image: url("../images/work-space.PNG");
 	background-size: cover;
 	background-position: center top;
 	border-radius: 12px;
