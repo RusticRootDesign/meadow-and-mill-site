@@ -435,18 +435,7 @@ a {
 	pull social icons from side of screen
 */
 .social-links {
-	margin: 0 !important;
-	padding: 0;
-	display: flex;
-	gap: 0.5rem;
-	width: auto !important;
-	max-width: none !important;
-}
-
-ul.social-links {
-	max-width: none;
-	width: auto;
-	margin: 0;
+	margin-left: 40px;
 }
 
 /*
@@ -454,7 +443,7 @@ ul.social-links {
 */
 .social-links li {
 	display: inline-block;
-	padding: 10px 10px 0 0;
+	padding: 10px 0 10px 0;
 }
 
 /*
