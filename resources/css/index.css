@@ -443,6 +443,12 @@ a {
 	max-width: none;
 }
 
+ul.social-links {
+	max-width: none;
+	width: auto;
+	margin: 0;
+}
+
 /*
 	Make sure social links display inline as block elements, and are well spaced
 */
