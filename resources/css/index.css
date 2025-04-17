@@ -435,7 +435,9 @@ a {
 	pull social icons from side of screen
 */
 .social-links {
-	margin-left: 40px;
+	margin-left: 0;
+	display: flex;
+	gap: 0.5rem;
 }
 
 /*
