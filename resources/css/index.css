@@ -427,15 +427,19 @@ a {
 	Define area for social links and copyright, make sure they display as flex
 */
 .footer-contact {
+	width: 100%
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 0 2rem;
 	gap: 1rem;
 }
 /*
 	pull social icons from side of screen
 */
 .social-links {
+	display: flex;
+	gap: 0.5rem;
 	margin-left: 0;
 }
 
