@@ -1,0 +1,1051 @@
+/*
+	Meadow & Mill Stylesheet
+	Primary styles for layout, typography, and navigation.
+	Last updated: 04/12/25
+*/
+
+/*
+	Global Reset
+	Remove default margins/padding and use border-box for predictable sizing.
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*
+	Body Styles
+	Set background, text color, and default font.
+*/
+body {
+	background-color: #f5f1e3;
+	color: #836954;
+	font-family: "lato", sans-serif;
+}
+
+/*
+	Default Link Styles
+	Neutral base style for anchor tags.
+*/
+a {
+	color: #0e0b08;
+	text-decoration: none;
+}
+
+/*
+	Header Container
+	Defines fixed height and full width for the header area.
+*/
+#header-box {
+	height: 220px;
+	width: 100%;
+	display: flex;
+}
+
+/*
+	Navigation Box Layout
+	Centered flexbox layout for nav items around the logo.
+*/
+.navigation-box {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+}
+
+/*
+	Navigation Link Styles
+	Serif type, lowercase, spacing adjustments, and hover transitions.
+*/
+.nav-style {
+	font-family: "EB Garamond", serif;
+	font-weight: 600;
+	text-transform: lowercase;
+	letter-spacing: 0.5px;
+	padding: 0.5rem 0.75rem;
+	transition: all 0.2s ease;
+	font-size: 1.25rem;
+}
+
+/*
+	Decorative Spans
+	Thin vertical lines acting as visual dividers between nav sections.
+*/
+.divider {
+	width: 1px;
+	height: 1rem;
+	background: linear-gradient(to bottom, #7b9e89, #a67658);
+	opacity: 0.5;
+	border-radius: 999px;
+}
+
+/*
+	Navigation Hover Effect
+	Adds subtle background and color change - excludes logo link in HTML via class.
+*/
+.nav-left a:hover,
+.nav-left a:focus,
+.nav-right a:hover,
+.nav-right a:focus {
+	color: #a67658;
+	background-color: #e9e2d4;
+	border-radius: 4px;
+}
+
+/*
+	Logo Image
+	Larger height to distinguish it from nav links.
+*/
+.navigation-box img {
+	height: 200px;
+}
+
+/*
+	Nav Links on Left
+	Make flex element
+*/
+.nav-left,
+.nav-right {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+/*
+	Set hero section to flex, and center content
+*/
+#hero-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*
+	define position and size of background image
+*/
+.hero-background-wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/*
+	Set specs on background image
+*/
+.hero-background-image {
+	width: 100%;
+	height: auto;
+	display: block;
+	max-height: 600px;
+	margin-bottom: 40px;
+}
+
+/*
+	Map out the box that will hold the content on top of the image background. Center it and give it opacity
+*/
+.hero-content-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	background-color: rgba(245, 241, 227, 0.8);
+	padding: 40px;
+	padding-bottom: 50px;
+}
+
+/*
+	Make the headline lines block elements, set font specs
+*/
+.headline-left,
+.headline-right {
+	display: block;
+	font-size: 3rem;
+	line-height: 1.2;
+	font-family: "Great Vibes", cursive;
+}
+
+/*
+	Offset top headline line to the left
+*/
+.headline-left {
+	transform: translateX(-8%);
+}
+
+/*
+	Offset second headline line to the right
+*/
+.headline-right {
+	transform: translateX(8%);
+	margin-top: -0.2em;
+}
+
+/*
+	Create content divier
+*/
+.hero-divider {
+	display: block;
+	margin: 0.5rem auto;
+	width: 200px;
+	height: 0;
+	border-bottom: 2px solid #a58f72;
+	border-radius: 50%;
+}
+
+/*
+	Define margins for tagline
+*/
+.hero-content-container h3 {
+	padding: 1rem;
+	margin-bottom: 20px;
+}
+
+/*
+	Style CTA button - parchment inspired
+*/
+.cta-parchment {
+	background-color: #f5f1e3;
+	color: #3b5a3b;
+	font-family: "Playfair Display", serif;
+	border: 1px solid #8e8e7b;
+	padding: 16px 32px;
+	font-size: 1.2rem;
+	letter-spacing: 0.5px;
+	box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+/*
+	Create hover effect on CTA
+*/
+.cta-parchment:hover {
+	background-color: #a8bba2;
+	transform: scale(1.02);
+	box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/*
+	Set base settings for the featured section
+*/
+#feature-section {
+	background-color: #c6d3c2;
+	box-shadow: 0 -12px 16px -8px rgba(0, 0, 0, 0.18),
+			0 12px 16px -8px rgba(0, 0, 0, 0.18);
+}
+
+/*
+	Set display type to flex for all features
+*/
+.feature {
+	display: flex;
+	padding-top: 40px;
+}
+
+/*
+	Setup flex layout for feature box
+*/
+.feature-wrapper {
+	width: auto;
+	display: flex;
+}
+
+
+/*
+	Justify content on top of each other and in the center, set box width
+*/
+.feature-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	width: 45%;
+}
+
+/*
+	Set up styles for all features subheadline
+*/
+.feature-sub {
+	font-family: "Playfair Display", serif;
+	font-size: 0.85rem;
+	letter-spacing: 0.08em;
+	color: #6a7a64;
+	text-transform: uppercase;
+}
+
+/*
+	Set stylings for all features Headline
+*/
+.feature-name {
+	font-family: "Playfair Display", serif;
+	font-size: 2.3rem;
+	font-weight: 500;
+	color: #3e4e39;
+	margin-top: 0.2rem;
+}
+
+/*
+	Set stylings for all features description
+*/
+.feature-body {
+	font-size: 1rem;
+	line-height: 1.7;
+	color: #4a5444;
+	padding-bottom: 16px;
+}
+
+/*
+	Set up initial feature button for all features
+*/
+.feature-cta {
+	align-self: center;
+	font-size: 0.9rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	background-color: #8d9985;
+	color: f5f2e8;
+	padding: 0.75rem 1.5rem;
+	border: 2px solid #6e7c68;
+	border-radius: 6px;
+	box-shadow: 1px 1px 3px rgba(60, 70, 50, 0.2);
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+/*
+	set up features CTA hover effect
+*/
+.feature-cta:hover {
+	background-color: #75806c;
+	color: #fff;
+}
+
+/*
+	Define size, margins, padding, for feature images
+*/
+.feature img {
+	width: 38%;
+	padding-right: 40px;
+	padding-bottom: 40px;
+	padding-left: 60px;
+}
+
+/*
+	Seperate features by dividers
+*/
+.feature-divider {
+	display: block;
+	border-top: 1px solid #8d9985;
+	position: relative;
+	margin: 0 auto 0 auto;
+	width: 60%;
+}
+
+/*
+	Add decoration on divider line
+*/
+.feature-divider::after {
+	content: "";
+	position: absolute;
+	top: -50%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 8px;
+	height: 8px;
+	background-color: #8d9985;
+	border-radius: 50%;
+}
+
+/* Offset featured items for alternating layout */
+.feature-left {
+	transform: translateX(-70px);
+}
+
+.feature-right {
+	transform: translateX(70px);
+}
+
+/*
+	Footer Section
+	contains logo, navigation, social links, copyright
+*/
+#footer {
+	display: flex;
+}
+
+/*
+	Setup  box that holds logo and footer navigation so they can be centered
+*/
+.footer-nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+}
+
+/*
+	Set size of footer logo
+*/
+.footer-nav img {
+	height: 160px;
+	padding-top: 40px;
+}
+
+/*
+	Setup layout for footer navigation
+*/
+.footer-links {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/*
+	make sure footer links display inline as block elements
+*/
+.footer-links li {
+	display: inline-block;
+}
+
+/*
+	Set up hover effects on footer navigation
+*/
+.footer-links a:hover,
+.footer-links a:focus {
+	color: #a67658;
+	background-color: #e9e2d4;
+	border-radius: 4px;
+}
+
+/*
+	Define area for social links and copyright, make sure they display as flex
+*/
+.footer-contact {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/*
+	pull social icons from side of screen
+*/
+.social-links {
+	margin-left: 40px;
+}
+
+/*
+	Make sure social links display inline as block elements, and are well spaced
+*/
+.social-links li {
+	display: inline-block;
+	padding: 10px 0 10px 0px;
+}
+
+/*
+	define size of social icons
+*/
+.social-links li img {
+	height: 32px;
+}
+
+/*
+	Pull copyright info off side of page
+*/
+.copy {
+	margin-right: 40px;
+}
+
+
+
+/*
+	CSS for About page starts here
+*/
+
+/*
+	Setup story-section
+*/
+#story-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 1rem 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.story-image {
+	flex: 1 1 40%;
+	max-width: 400px;
+}
+
+.story-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.story-content {
+	flex: 1 1 50%;
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.story-content h6 {
+	font-size: 1rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.story-content h2,
+.bio-left h2 {
+	font-size: 2rem;
+	line-height: 1.2;
+	color: #3a2f2b;
+	font-family: "Playfair Display", serif;
+	margin: 0;
+}
+
+.story-content p,
+.bio-left p {
+	font-size: 1.125rem;
+	line-height: 1.4;
+}
+
+#mission-section {
+	background-color: #c6d3c2;
+	padding: 2.75rem 0;
+	box-shadow: 0 -12px 16px -8px rgba(0, 0, 0, 0.18),
+			0 12px 16px -8px rgba(0, 0, 0, 0.18);
+}
+
+#mission-section h2 {
+	font-size: 2rem;
+	color: #3e4e39;
+	text-align: center;
+	margin-bottom: 1.5rem;
+	letter-spacing: 0.03em;
+	font-family: "Playfair Display", serif;
+	text-transform: uppercase;
+}
+
+.mission-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+	border-radius: 12px;
+}
+
+.mission-content {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: space-between;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 1rem 0 0 0;
+	color: #4a5444;
+	font-size: 1.125;
+	line-height: 1.4;
+}
+
+.mission-paragraph {
+	display: flex;
+	flex-direction: column;
+	gap: 1.75rem;
+	font-size: 1.125rem;
+	line-height: 1.4;
+	color: #4a5444;
+}
+
+.mission-paragraph,
+.core-values {
+	flex: 1 1 45%;
+	max-width: 420px;
+}
+
+.core-values {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.core-values p {
+	margin: 0;
+	color: #4a5444;
+	font-size: 1.125rem;
+	line-height: 1.4;
+}
+
+.core-values ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 2rem;
+	row-gap: 1rem;
+}
+
+.core-values li {
+	flex: 0 0 calc(50% - 1 rem);
+	box-sizing: border-box;
+	position: relative;
+	padding-left: 1.2rem;
+	color: #4a5444;
+	line-height: 1;
+}
+
+.core-values li::before {
+	content: "•";
+	position: absolute;
+	left: 0;
+	color: #8e735b;
+	font-size: 1.2rem;
+}
+
+
+/*
+	Bio section stylings start here
+*/
+#bio-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 2rem;
+	padding: 1rem 2rem;
+	max-width: 1200px;
+	margin: 0 auto 3rem;
+	margin-top: 3rem;
+}
+
+.bio-content p {
+	margin-bottom: 1rem;
+}
+
+.bio-left {
+	flex: 1 1 50%;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.bio-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 340px;
+	width: 100%;
+}
+
+.bio-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+#work-section {
+	background-color: #c6d3c2;
+	padding: 3rem 1rem;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0 -12px 16px -8px rgba(0, 0, 0, 0.18),
+			0 12px 16px -8px rgba(0, 0, 0, 0.18);
+}
+
+.work-background-wrapper {
+	background-image: url("../images/work-space.png");
+	background-size: cover;
+	background-position: center top;
+	border-radius: 12px;
+	width: 100%;
+	max-width: 1280px;
+	height: 800px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.work-content {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	background-color: rgba(245, 241, 227, 0.55);
+	padding: 1.5rem;
+	max-width: 760px;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.work-content h2 {
+	font-size: 1.75rem;
+	font-family: "Playfair Display", serif;
+	margin-bottom: 0.5rem;
+	color: #4e5b48;
+}
+
+.work-content p {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #5a4d3b;
+}
+
+/* Styling for quote overlay and author attribution */
+.quote-box {
+	position: absolute;
+	bottom: 1.5rem;
+	left: 1.5rem;
+	background-color: rgba(245, 241, 227, 0.55);
+	padding: 1rem 1.25rem;
+	max-width: 280px;
+	border-radius: 8px;
+	font-size: 0.95rem;
+	color: #5a4d3b;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.quote-box .quote-author {
+	display: block;
+	margin-top: 0.5rem;
+	font-size: 0.7rem;
+	font-style: italic;
+	color: #7b6a58;
+}
+
+/* start stylings for Products page */
+#products-intro {
+	padding: 1rem 0;
+}
+
+.products-intro-background {
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+	border-radius: 12px;
+	padding: 1rem;
+}
+
+.products-background-image {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 600px;
+	object-fit: cover;
+	border-radius: 8px;
+	filter: brightness(0.9);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.products-intro {
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	background-color: rgba(245, 241, 227, 0.60);
+	padding: 1.5rem;
+	max-width: 850px;
+	border-radius: 8px;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.products-intro h1 {
+	font-size: 1.75rem;
+	font-family: "Playfair Display", serif;
+	margin-bottom: 0.5rem;
+	color: #4e5b48;
+}
+
+.products-intro p {
+	font-size: 0.85rem;
+	line-height: 1.4;
+	color: #5a4d3b;
+}
+
+/* Horizontal Divider Between Text Blocks */
+.product-divider {
+	display: block;
+	margin: 1rem auto;
+	width: 400px;
+	border-bottom: 1px dotted #7b9e89;
+	opacity: 0.8;
+}
+
+
+/* Product Section: Herbal Skincare */
+#herbal-skincare-section {
+	background-color:#c6d3c2;
+	padding: 2rem 2rem;
+	box-shadow: 0 -12px 16px -8px rgb(0 0 0 / 18%), 0 12px 16px -8px rgb(0 0 0 / 18%);
+}
+
+/* Product Intro Text Blocks */
+.product-intro {
+	max-width: 800px;
+	margin: 0 auto 1rem auto;
+	text-align: center;
+	color: #4a5444;
+}
+
+.product-intro h2 {
+	font-size: 1.8rem;
+	margin-bottom: 0.05rem;
+	font-family: "Playfair Display", serif;
+	color: #3e4e39;
+}
+
+.herbal-intro h4 {
+	font-size: 1.1rem;
+	font-weight: normal;
+	font-style: italic;
+	margin-bottom: 0.6rem;
+}
+
+/* Grid Layout for Product Cards */
+.product-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Individual Product Cards */
+.product-grid article {
+	background-color: rgba(245, 241, 227, 0.85);
+	padding: 1.5rem;
+	border-radius: 12px;
+	width: 100%;
+	max-width: 400px;
+	flex: 1 1 380px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.product-grid article img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 1rem;
+}
+
+.product-grid h3 {
+	margin-top: 0;
+	font-size: 1.4rem;
+	color: #3a2f2b;
+}
+
+.product-grid h4 {
+	font-size: 1rem;
+	font-weight: normal;
+	margin: 0.1rem 0 1rem 0;
+	font-style: italic;
+}
+
+.product-grid p {
+	color: #836954;
+}
+
+/* Product Section: Candles */
+#candles {
+	padding: 2rem 2rem;
+}
+
+#candles h2,
+#candles h4 {
+	color: #3a2f2b;
+}
+
+#candles p {
+	color: #836954;
+}
+
+/* Product Section: Soap */
+#soap {
+	background-color: #c6d3c2;
+	padding: 2rem 2rem;
+	box-shadow: 0 -12px 16px -8px rgb(0 0 0 / 18%), 0 12px 16px -8px rgb(0 0 0 / 18%);
+}
+
+/* Journal styles start here */
+
+#journal-intro {
+	display: flex;
+	justify-content: center;
+}
+
+.intro-box {
+	display: flex;
+	align-items: center;
+	max-width: 900px;
+	gap: 2rem;
+	border-radius: 12px;
+}
+
+.intro-text {
+	flex: 2;
+	text-align: left;
+}
+
+.intro-text h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	font-family: "Playfair Display", serif;
+	color: #3a2f2b;
+}
+
+.intro-text p {
+	font-size: 1.1rem;
+	line-height: 1.5;
+	color: #836954;
+	margin-bottom: 1rem;
+}
+
+.intro-feather {
+	flex: 1;
+	max-width: 220px;
+	opacity: 0.8;
+}
+
+.journal-entry {
+	max-width: 900px;
+	margin: 0 auto 4rem auto;
+	padding: 2rem;
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.journal-entry h2 {
+	font-size: 1.8rem;
+	color: #7b9e89;
+	margin-bottom: 0.2rem;
+	font-family: "Playfair Display", serif;
+}
+
+.entry-date {
+	font-size: 0.95rem;
+	color: #a67658;
+	margin-bottom: 0.8rem;
+	font-style: italic;
+}
+
+.entry-excerpt {
+	font-size: 1.1rem;
+	line-height: 1.5;
+	color: #5f4c3c;
+	margin-bottom: 0.8rem;
+}
+
+.journal-entry a {
+	font-size: 0.95rem;
+	color: #7b9a89;
+	border-bottom: 1px solid #7b9e89;
+	transition: all 0.2s ease-in-out;
+}
+
+.journal-entry a:hover {
+	color: #a67658;
+	border-color: #a67658;
+}
+
+.soft-section {
+	background-color: #e9e1d6;
+}
+
+#contact-intro {
+	padding: 3rem 2rem;
+	text-align: center;
+	border-top: 2px solid #c2b49d;
+	border-bottom: 2px solid #c2b49d;
+	margin-bottom: 2rem;
+}
+
+#contact-intro h1 {
+	font-size: 2.25rem;
+	margin-bottom: 1.5rem;
+	color: #5a4e3c;
+	font-family: "Playfair Display", serif;
+}
+
+.contact-message p {
+	font-size: 1.1rem;
+	line-height: 1.5;
+	color: #3e3e3e;
+}
+
+.contact-message p:nth-child(1) {
+	font-style: italic;
+	color: #7d6f5e;
+}
+
+.contact-message p:nth-child(2) {
+	font-weight: 500;
+	color: #4a3f35;
+}
+
+#contact-details {
+	padding: 1rem;
+}
+
+.contact-email {
+	font-size: 1rem;
+	font-weight: 500;
+	text-align: center;
+	color: #5a4e3c;
+	margin-bottom: 2rem;
+}
+
+.social-links {
+	display: flex;
+	align-items: center;
+	gap: 4rem;
+	background-color: #f5f1e3;
+	padding: 1rem 1.5rem;
+	border-radius: 12px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	max-width: 600px;
+	width: 100%;
+	transition: background-color 0.3s ease;
+	margin: 0 auto;
+}
+
+.social-item:hover {
+	background-color: #ece7d9;
+}
+
+.social-item img {
+	width: 42px;
+	height: 42px;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+.social-item p {
+	margin: 0;
+	line-height: 1.4;
+	color: #3d3d3d;
+}
+
+.social-item strong {
+	font-size: 1rem;
+	color: #5e4d39;
+}
+
+.social-item em {
+	font-size: 0.9;
+	color: #7b6e5d;
+}
